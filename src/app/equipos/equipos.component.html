@@ -1,4 +1,4 @@
-<ng-container>
+<ng-container *ngIf="equipo">
     <h2>Informacion de {{equipo.nombre}}</h2>
     <h2>Informacion de {{equipo.ciudad}}</h2>
     <h2>Informacion de {{equipo.director}}</h2>
@@ -19,3 +19,9 @@
     </div>
     </div>
     </ng-container>
+    <h2>Lista de equipos</h2>
+    <ul class="equipos">
+      <li *ngFor = "let equipoItem of equipos" (click)="seleccionar(equipoItem)" [class.selected]="equipoItem==equipo">
+        <span class="insignia">{{equipoItem.id}}</span>{{equipoItem.nombre}}
+      </li>
+    </ul>
