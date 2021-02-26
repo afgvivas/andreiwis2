@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { EquiposComponent } from './equipos/equipos.component';
+import { EquipoDetalleComponent } from './equipo-detalle/equipo-detalle.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    EquiposComponent
+    EquiposComponent,
+    EquipoDetalleComponent
   ],
   imports: [
     BrowserModule,

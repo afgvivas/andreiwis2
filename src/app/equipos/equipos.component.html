@@ -1,27 +1,8 @@
-<ng-container *ngIf="equipo">
-    <h2>Informacion de {{equipo.nombre}}</h2>
-    <h2>Informacion de {{equipo.ciudad}}</h2>
-    <h2>Informacion de {{equipo.director}}</h2>
-    <div>
-    <div>
-      <label>Nombre del equipo : </label>
-      <input [(ngModel)]="equipo.nombre" placeholder="Nombre del equipo"><br>
-    </div>
-    <br>
-    <div>
-      <label>Ciudad del equipo : </label>
-      <input [(ngModel)]="equipo.ciudad" placeholder="Nombre de la ciudad"><br>
-    </div>
-    <br>
-    <div>
-      <label>Director del equipo : </label>
-      <input [(ngModel)]="equipo.director" placeholder="Nombre del director" ><br>
-    </div>
-    </div>
-    </ng-container>
-    <h2>Lista de equipos</h2>
-    <ul class="equipos">
-      <li *ngFor = "let equipoItem of equipos" (click)="seleccionar(equipoItem)" [class.selected]="equipoItem==equipo">
-        <span class="insignia">{{equipoItem.id}}</span>{{equipoItem.nombre}}
-      </li>
-    </ul>
+
+<h2>Lista de equipos</h2>
+<ul class="equipos">
+  <li *ngFor="let equipoItem of equipos" (click)="seleccionar(equipoItem)" [class.selected]="equipoItem==equipo">
+    <span class="insignia">{{equipoItem.id}}</span>{{equipoItem.nombre}}
+  </li>
+</ul>
+<pagl-equipo-detalle [equipo]="equipo"></pagl-equipo-detalle>
