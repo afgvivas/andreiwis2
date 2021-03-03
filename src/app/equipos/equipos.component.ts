@@ -20,9 +20,8 @@ export class EquiposComponent implements OnInit {
   equipo: Equipo;
 
   seleccionar(item: Equipo):void{
-    this.equipo = item;
-    //Mejora de codigo para que oculte los campos en caso de que se de click sobre el que esta seleccionado
-    //!this.equipo ? this.equipo = item : (this.equipo==item? this.equipo = null : this.equipo = item);
+    //this.equipo = item;
+    !this.equipo ? this.equipo = item : (this.equipo==item? this.equipo = null : this.equipo = item);
   }
 
   constructor() { }
