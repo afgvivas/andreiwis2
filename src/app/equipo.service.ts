@@ -17,4 +17,9 @@ export class EquipoService {
     this.mensajeService.agregar("Equipo service: Obtiene lista de equipos");
     return of(EQUIPOS);
   }
+
+  getEquipo(id: number): Observable<Equipo>{
+    this.mensajeService.agregar("Equipo service: Equipo encontrado id: "+id);
+    return of(EQUIPOS.find(equipo => equipo.id === id));
+  }
 }
